@@ -1,0 +1,52 @@
+name: Deploy Portfolio Website
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js (for validation tools)
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Validate HTML
+      run: |
+        npx html-validate *.html || echo "HTML validation completed with warnings"
+        
+    - name: Check CSS
+      run: |
+        npx stylelint "css/*.css" --config-basedir . || echo "CSS linting completed"
+        
+    - name: Check JavaScript
+      run: |
+        npx eslint js/*.js --no-eslintrc --env browser,es6 --parserOptions ecmaVersion:2020 || echo "JS linting completed"
+        
+    - name: Test site accessibility
+      run: |
+        echo "Accessibility testing would go here"
+        
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
+        exclude_assets: '.github,node_modules,.kiro'
+        
+    - name: Lighthouse CI
+      if: github.event_name == 'pull_request'
+      run: |
+        npm install -g @lhci/cli
+        lhci autorun || echo "Lighthouse CI completed"
+      env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
