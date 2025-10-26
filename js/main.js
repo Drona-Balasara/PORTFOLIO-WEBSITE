@@ -400,5 +400,115 @@ document.addEventListener('DOMContentLoaded', function() {
         case 'certificates.html':
             safeExecute(() => initCertificateModal(), 'Certificate Modal');
             break;
+        case 'skills.html':
+            safeExecute(() => initSkillsFilter(), 'Skills Filter');
+            safeExecute(() => initSkillsLevelAnimation(), 'Skills Level Animation');
+            break;
     }
 });
+
+// ===== SKILLS FILTER FUNCTIONALITY =====
+function initSkillsFilter() {
+    console.log('Initializing skills filter...');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const skillsCategories = document.querySelectorAll('.skills-category');
+
+    console.log('Filter tabs found:', filterTabs.length);
+    console.log('Skills categories found:', skillsCategories.length);
+
+    if (filterTabs.length === 0 || skillsCategories.length === 0) {
+        console.log('No filter tabs or categories found, exiting...');
+        return;
+    }
+
+    // Add click event listeners to filter tabs
+    filterTabs.forEach((tab, index) => {
+        console.log(`Adding click listener to tab ${index}:`, tab.textContent);
+        tab.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            console.log('Filter clicked:', filter);
+            
+            // Remove active class from all tabs
+            filterTabs.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Filter categories
+            filterCategories(filter);
+        });
+    });
+
+    function filterCategories(filter) {
+        console.log('Filtering categories for:', filter);
+        skillsCategories.forEach(category => {
+            const categoryType = category.getAttribute('data-category');
+            console.log(`Category: ${categoryType}, Filter: ${filter}`);
+            
+            if (filter === 'all') {
+                // Show all categories
+                category.style.display = 'block';
+                category.style.opacity = '1';
+                category.style.transform = 'translateY(0)';
+                console.log('Showing all categories');
+            } else if (categoryType === filter) {
+                // Show matching category
+                category.style.display = 'block';
+                category.style.opacity = '1';
+                category.style.transform = 'translateY(0)';
+                console.log(`Showing category: ${categoryType}`);
+            } else {
+                // Hide non-matching categories
+                category.style.opacity = '0';
+                category.style.transform = 'translateY(20px)';
+                console.log(`Hiding category: ${categoryType}`);
+                
+                // Hide after transition
+                setTimeout(() => {
+                    if (category.style.opacity === '0') {
+                        category.style.display = 'none';
+                    }
+                }, 300);
+            }
+        });
+    }
+
+    // Initialize with all skills visible
+    filterCategories('all');
+}
+
+// ===== SKILLS LEVEL ANIMATION =====
+function initSkillsLevelAnimation() {
+    const skillBars = document.querySelectorAll('.level-bar');
+    
+    if (skillBars.length === 0) return;
+
+    // Animate skill bars when they come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const level = bar.getAttribute('data-level');
+                
+                // Animate the width
+                setTimeout(() => {
+                    bar.style.width = level + '%';
+                }, 200);
+                
+                // Stop observing this element
+                observer.unobserve(bar);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    skillBars.forEach(bar => {
+        // Set initial width to 0
+        bar.style.width = '0%';
+        bar.style.transition = 'width 1s ease-out';
+        
+        // Start observing
+        observer.observe(bar);
+    });
+}

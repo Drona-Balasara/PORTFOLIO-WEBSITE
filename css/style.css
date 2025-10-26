@@ -8036,4 +8036,107 @@ eam participation note styling */
   .contact-wrapper {
     padding: 0 0.75rem;
   }
+}/
+* Project Note Styling */
+.project-note {
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 3px solid #ffc107;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.project-note strong {
+  color: #ffc107;
+  font-weight: 600;
+}/* 
+AI Translator Image Fallback */
+.ai-translator-image {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.ai-translator-image .image-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ai-translator-image img[src*="hybrid-ai-translator.jpg"] {
+  opacity: 0;
+}
+
+.ai-translator-image img[src*="hybrid-ai-translator.jpg"] + .image-fallback {
+  opacity: 1;
+}
+
+.fallback-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.fallback-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}/*
+ Skills Filter Transitions */
+.skills-category {
+  transition: all 0.3s ease;
+}
+
+.filter-tab {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.filter-tab:hover {
+  background: rgba(0, 194, 168, 0.1);
+  color: var(--primary);
+}
+
+.filter-tab.active {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 194, 168, 0.3);
+}
+
+/* Skill Level Bar Styling */
+.skill-level {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.level-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: 3px;
+  width: 0%;
+  transition: width 1s ease-out;
+}/* S
+kills Filter Transitions - Keep existing button styles */
+.skills-category {
+  transition: all 0.3s ease;
+}
+
+.filter-tab.active {
+  background: var(--primary) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(0, 194, 168, 0.3);
 }
