@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Certificates - Balasara Drona Prakash Achievements">
+    <title>Certificates - Balasara Drona Prakash</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Critical CSS to prevent loading screen issues -->
+    <style>
+        /* Force page visibility */
+        body,
+        .page-content,
+        main {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: none !important;
+        }
+
+        /* Hide any problematic overlays */
+        #page-transition-overlay,
+        .transition-overlay,
+        [id*="transition"][id*="overlay"] {
+            display: none !important;
+        }
+
+        /* Ensure certificate modal starts hidden */
+        .certificate-modal {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .certificate-modal.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+
+<body class="page-certificates">
+    <!-- Modern Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon">🏠</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <span class="nav-icon">👨‍💻</span>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="experience.html" class="nav-link">
+                        <span class="nav-icon">💼</span>
+                        <span>Experience</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">
+                        <span class="nav-icon">🚀</span>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="skills.html" class="nav-link">
+                        <span class="nav-icon">⚡</span>
+                        <span>Skills</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="certificates.html" class="nav-link active">
+                        <span class="nav-icon">🏆</span>
+                        <span>Certificates</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <span class="nav-icon">📧</span>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="page-content">
+
+
+        <!-- Certificates Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Certificates & Achievements</h1>
+                <p class="page-subtitle">Professional development and recognition</p>
+            </div>
+        </section>
+
+        <!-- Certificates Grid -->
+        <section class="certificates-grid-section">
+            <div class="container">
+                <div class="certificates-grid">
+                    <!-- Certificate 1: Semester 1 Result -->
+                    <div class="certificate-card" data-certificate="sem1">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/1.jpg" alt="Semester 1 Result">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Semester 1 Result</h3>
+                            <div class="certificate-issuer">Kadi Sarva Vishwavidyalaya</div>
+                            <div class="certificate-date">2023</div>
+                            <p class="certificate-description">First semester academic results for Bachelor of Computer
+                                Applications program.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Academic Excellence</span>
+                                <span class="skill-badge">Computer Fundamentals</span>
+                                <span class="skill-badge">Programming Basics</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="sem1">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2: Semester 2 Result -->
+                    <div class="certificate-card" data-certificate="sem2">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/2.jpg" alt="Semester 2 Result">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Semester 2 Result</h3>
+                            <div class="certificate-issuer">Kadi Sarva Vishwavidyalaya</div>
+                            <div class="certificate-date">2023</div>
+                            <p class="certificate-description">Second semester academic results showing continued
+                                academic progress in computer applications.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Academic Progress</span>
+                                <span class="skill-badge">Data Structures</span>
+                                <span class="skill-badge">Mathematics</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="sem2">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 3: Semester 3 Result -->
+                    <div class="certificate-card" data-certificate="sem3">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/3.jpg" alt="Semester 3 Result">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Semester 3 Result</h3>
+                            <div class="certificate-issuer">Kadi Sarva Vishwavidyalaya</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">Third semester academic achievements in advanced computer
+                                science subjects.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Advanced Programming</span>
+                                <span class="skill-badge">Database Systems</span>
+                                <span class="skill-badge">Web Technologies</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="sem3">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 4: Semester 4 Result -->
+                    <div class="certificate-card" data-certificate="sem4">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/4.jpg" alt="Semester 4 Result" loading="lazy"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=certificate-placeholder><span class=certificate-icon>📊</span></div>'">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Semester 4 Result</h3>
+                            <div class="certificate-issuer">Kadi Sarva Vishwavidyalaya</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">Fourth semester results demonstrating consistent academic
+                                performance and technical skill development.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Software Engineering</span>
+                                <span class="skill-badge">System Analysis</span>
+                                <span class="skill-badge">Project Management</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="sem4">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 5: Python & Django -->
+                    <div class="certificate-card" data-certificate="python-django">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/5.jpg" alt="Python & Django Certificate" loading="lazy"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=certificate-placeholder><span class=certificate-icon>🐍</span></div>'">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Python & Django Mastery</h3>
+                            <div class="certificate-issuer">Udemy</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">Comprehensive course covering Python programming and
+                                Django web framework for full-stack development.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Python</span>
+                                <span class="skill-badge">Django</span>
+                                <span class="skill-badge">Web Development</span>
+                                <span class="skill-badge">Backend Development</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="python-django">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 6: AI Tools Workshop -->
+                    <div class="certificate-card" data-certificate="ai-tools">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/6.jpg" alt="AI Tools Workshop" loading="lazy"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=certificate-placeholder><span class=certificate-icon>🤖</span></div>'">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">AI Tools Workshop</h3>
+                            <div class="certificate-issuer">Be10X</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">Hands-on workshop covering modern AI tools, prompt
+                                engineering, and practical applications in development workflows.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">AI Tools</span>
+                                <span class="skill-badge">Prompt Engineering</span>
+                                <span class="skill-badge">ChatGPT</span>
+                                <span class="skill-badge">Automation</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="ai-tools">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 7: IEEE EMBS Internship -->
+                    <div class="certificate-card" data-certificate="ieee-embs">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/7.jpg" alt="IEEE EMBS Internship" loading="lazy"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=certificate-placeholder><span class=certificate-icon>💼</span></div>'">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Internship Completion Certificate</h3>
+                            <div class="certificate-issuer">IEEE EMBS Pune</div>
+                            <div class="certificate-date">2025</div>
+                            <p class="certificate-description">Successful completion of web development internship with
+                                focus on responsive design and multimedia content creation.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Web Development</span>
+                                <span class="skill-badge">Responsive Design</span>
+                                <span class="skill-badge">Team Collaboration</span>
+                                <span class="skill-badge">Project Management</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="ieee-embs">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 8: IT Fair Participation -->
+                    <div class="certificate-card" data-certificate="it-fair-participation">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/8.jpg" alt="IT Fair Participation" loading="lazy"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=certificate-placeholder><span class=certificate-icon>🎯</span></div>'">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">IT Fair Participation</h3>
+                            <div class="certificate-issuer">College</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">Active participation in college IT fair showcasing
+                                technical projects and innovative solutions.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Project Presentation</span>
+                                <span class="skill-badge">Technical Innovation</span>
+                                <span class="skill-badge">Public Speaking</span>
+                                <span class="skill-badge">Team Work</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="it-fair-participation">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 9: IT Fair 1st Runner-up -->
+                    <div class="certificate-card" data-certificate="it-fair-runner-up">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/9.jpg" alt="IT Fair 1st Runner-up" loading="lazy"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=certificate-placeholder><span class=certificate-icon>🏆</span></div>'">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">IT Fair 1st Runner-up</h3>
+                            <div class="certificate-issuer">College</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">First runner-up achievement in competitive college IT
+                                fair showcasing exceptional technical skills and innovation.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Innovation</span>
+                                <span class="skill-badge">Competition Winner</span>
+                                <span class="skill-badge">Technical Excellence</span>
+                                <span class="skill-badge">Problem Solving</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="it-fair-runner-up">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 10: Entrepreneurship Awareness Program -->
+                    <div class="certificate-card" data-certificate="entrepreneurship">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/10.jpg" alt="Entrepreneurship Awareness Program"
+                                loading="lazy"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=certificate-placeholder><span class=certificate-icon>💡</span></div>'">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Entrepreneurship Awareness Program</h3>
+                            <div class="certificate-issuer">College</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">Completion of entrepreneurship awareness program focusing
+                                on business development and startup methodologies.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Entrepreneurship</span>
+                                <span class="skill-badge">Business Development</span>
+                                <span class="skill-badge">Innovation</span>
+                                <span class="skill-badge">Leadership</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="entrepreneurship">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 11: Teachers Day Participation 1 -->
+                    <div class="certificate-card" data-certificate="teachers-day-1">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/11.jpg" alt="Teachers Day Participation" loading="lazy"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=certificate-placeholder><span class=certificate-icon>👨‍🏫</span></div>'">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Teachers Day Participation</h3>
+                            <div class="certificate-issuer">College</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">Active participation in Teachers Day celebration and
+                                cultural activities at college.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Cultural Activities</span>
+                                <span class="skill-badge">Event Participation</span>
+                                <span class="skill-badge">Community Engagement</span>
+                                <span class="skill-badge">Social Skills</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="teachers-day-1">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 12: Teachers Day Participation 2 -->
+                    <div class="certificate-card" data-certificate="teachers-day-2">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/12.jpg" alt="Teachers Day Participation" loading="lazy"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=certificate-placeholder><span class=certificate-icon>👨‍🏫</span></div>'">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Teachers Day Participation</h3>
+                            <div class="certificate-issuer">College</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">Additional recognition for outstanding participation in
+                                Teachers Day celebrations and activities.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Event Organization</span>
+                                <span class="skill-badge">Cultural Programs</span>
+                                <span class="skill-badge">Leadership</span>
+                                <span class="skill-badge">Teamwork</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="teachers-day-2">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 13: Tug of War Sports -->
+                    <div class="certificate-card" data-certificate="tug-of-war">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/13.jpg" alt="Tug of War Certificate">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Tug of War Sports Certificate</h3>
+                            <div class="certificate-issuer">College Sports</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">Participation and achievement in college sports
+                                competition - Tug of War event.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Sports</span>
+                                <span class="skill-badge">Team Spirit</span>
+                                <span class="skill-badge">Physical Fitness</span>
+                                <span class="skill-badge">Competition</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="tug-of-war">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 14: Sampark 2025 -->
+                    <div class="certificate-card" data-certificate="sampark-2025">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/14.jpg" alt="Sampark 2025 Certificate">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Sampark 2025</h3>
+                            <div class="certificate-issuer">Event Organization</div>
+                            <div class="certificate-date">2025</div>
+                            <p class="certificate-description">Participation certificate for Sampark 2025 event,
+                                demonstrating engagement in professional networking and skill development activities.
+                            </p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Networking</span>
+                                <span class="skill-badge">Professional Development</span>
+                                <span class="skill-badge">Event Participation</span>
+                                <span class="skill-badge">Communication</span>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="sampark-2025">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 15: ISRO Hackathon 2024 (Team Participation) -->
+                    <div class="certificate-card" data-certificate="isro-hackathon">
+                        <div class="certificate-image">
+                            <img src="assets/certificates/15.jpg" alt="ISRO Hackathon 2024 Certificate">
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Bhartiya Antariksh Hackathon 2024</h3>
+                            <div class="certificate-issuer">ISRO (Indian Space Research Organisation)</div>
+                            <div class="certificate-date">2024</div>
+                            <p class="certificate-description">Team participation certificate for ISRO Hackathon 2024.
+                                Collaborated as a team member in developing innovative space technology solutions.
+                                Certificate issued to team leader representing the entire team's contribution.</p>
+                            <div class="certificate-skills">
+                                <span class="skill-badge">Space Technology</span>
+                                <span class="skill-badge">Team Collaboration</span>
+                                <span class="skill-badge">Innovation</span>
+                                <span class="skill-badge">Problem Solving</span>
+                                <span class="skill-badge">ISRO Hackathon</span>
+                            </div>
+                            <div class="team-participation-note">
+                                <small><strong>Note:</strong> Team participation certificate - issued to team leader on
+                                    behalf of all team members</small>
+                            </div>
+                            <button class="btn btn-outline view-certificate-btn" data-modal="isro-hackathon">
+                                View Certificate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificate Statistics -->
+        <section class="certificate-stats-section">
+            <div class="container">
+                <h2 class="section-title">Achievement Summary</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📜</div>
+                        <div class="stat-number">18+</div>
+                        <div class="stat-label">Certificates Earned</div>
+                        <div class="stat-description">Academic and professional achievements</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎓</div>
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Semesters Completed</div>
+                        <div class="stat-description">Consistent academic progress</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏅</div>
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Competition Awards</div>
+                        <div class="stat-description">IT Fair and sports achievements</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🚀</div>
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Skills Developed</div>
+                        <div class="stat-description">Technical and soft skills</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Certificate Modal -->
+    <div class="certificate-modal" id="certificate-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+
+            <!-- Modal Controls -->
+            <div class="modal-controls">
+                <button class="modal-control-btn" id="zoom-in-btn" title="Zoom In">🔍+</button>
+                <button class="modal-control-btn" id="zoom-out-btn" title="Zoom Out">🔍-</button>
+                <button class="modal-control-btn" id="reset-zoom-btn" title="Reset Zoom">⚡</button>
+                <button class="modal-control-btn" id="download-btn" title="Download Certificate">📥</button>
+            </div>
+
+            <div class="modal-image-container" id="modal-image-container">
+                <img id="modal-certificate-image" src="" alt="Certificate" />
+            </div>
+
+            <div class="modal-info">
+                <h3 id="modal-certificate-title"></h3>
+                <p id="modal-certificate-issuer"></p>
+                <p id="modal-certificate-date"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Balasara Drona Prakash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/theme-manager.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gsap-animations.js"></script>
+    <script>
+        // Immediate fix for loading screen issue
+        (function () {
+            // Force page visibility immediately
+            document.body.style.opacity = '1';
+            document.body.style.visibility = 'visible';
+
+            // Remove any stuck overlays immediately
+            const removeOverlays = function () {
+                const overlays = document.querySelectorAll('#page-transition-overlay, .transition-overlay, [id*="overlay"]');
+                overlays.forEach(overlay => {
+                    if (overlay.id !== 'certificate-modal' && overlay.style.zIndex > 1000) {
+                        overlay.remove();
+                    }
+                });
+            };
+
+            // Run immediately and after DOM loads
+            removeOverlays();
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', removeOverlays);
+            }
+        })();
+
+        // Fix certificate image loading
+        document.addEventListener('DOMContentLoaded', function () {
+            // Force all certificate images to be visible and remove any problematic attributes
+            const certificateImages = document.querySelectorAll('.certificate-image img');
+            certificateImages.forEach((img, index) => {
+                // Remove any problematic attributes
+                img.removeAttribute('onerror');
+                img.removeAttribute('loading');
+
+                // Force visibility
+                img.style.display = 'block';
+                img.style.opacity = '1';
+                img.style.visibility = 'visible';
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+
+                // Debug: Log the image source
+                console.log(`Certificate ${index + 1} image:`, img.src);
+
+                // Add error handling that doesn't break the display
+                img.addEventListener('error', function () {
+                    console.log('Image failed to load:', this.src);
+                    this.style.background = 'linear-gradient(135deg, #00c2a8 0%, #00a693 100%)';
+                    this.alt = 'Certificate Image';
+                });
+
+                // Add load success handler
+                img.addEventListener('load', function () {
+                    console.log('Image loaded successfully:', this.src);
+                });
+            });
+        });
+
+        // Certificate Modal Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('certificate-modal');
+            const modalOverlay = document.getElementById('modal-overlay');
+            const modalClose = document.getElementById('modal-close');
+            const modalImage = document.getElementById('modal-certificate-image');
+            const modalImageContainer = document.getElementById('modal-image-container');
+            const modalTitle = document.getElementById('modal-certificate-title');
+            const modalIssuer = document.getElementById('modal-certificate-issuer');
+            const modalDate = document.getElementById('modal-certificate-date');
+
+            // Zoom controls
+            const zoomInBtn = document.getElementById('zoom-in-btn');
+            const zoomOutBtn = document.getElementById('zoom-out-btn');
+            const resetZoomBtn = document.getElementById('reset-zoom-btn');
+            const downloadBtn = document.getElementById('download-btn');
+
+            let currentZoom = 1;
+            let currentCertificateData = null;
+
+            // Certificate data mapping
+            const certificateData = {
+                'sem1': {
+                    image: 'assets/certificates/1.jpg',
+                    title: 'Semester 1 Result',
+                    issuer: 'Kadi Sarva Vishwavidyalaya',
+                    date: '2023'
+                },
+                'sem2': {
+                    image: 'assets/certificates/2.jpg',
+                    title: 'Semester 2 Result',
+                    issuer: 'Kadi Sarva Vishwavidyalaya',
+                    date: '2023'
+                },
+                'sem3': {
+                    image: 'assets/certificates/3.jpg',
+                    title: 'Semester 3 Result',
+                    issuer: 'Kadi Sarva Vishwavidyalaya',
+                    date: '2024'
+                },
+                'sem4': {
+                    image: 'assets/certificates/4.jpg',
+                    title: 'Semester 4 Result',
+                    issuer: 'Kadi Sarva Vishwavidyalaya',
+                    date: '2024'
+                },
+                'python-django': {
+                    image: 'assets/certificates/5.jpg',
+                    title: 'Python & Django Mastery',
+                    issuer: 'Udemy',
+                    date: '2024'
+                },
+                'ai-tools': {
+                    image: 'assets/certificates/6.jpg',
+                    title: 'AI Tools Workshop',
+                    issuer: 'Be10X',
+                    date: '2024'
+                },
+                'ieee-embs': {
+                    image: 'assets/certificates/7.jpg',
+                    title: 'Internship Completion Certificate',
+                    issuer: 'IEEE EMBS Pune',
+                    date: '2025'
+                },
+                'it-fair-participation': {
+                    image: 'assets/certificates/8.jpg',
+                    title: 'IT Fair Participation',
+                    issuer: 'College',
+                    date: '2024'
+                },
+                'it-fair-runner-up': {
+                    image: 'assets/certificates/9.jpg',
+                    title: 'IT Fair 1st Runner-up',
+                    issuer: 'College',
+                    date: '2024'
+                },
+                'entrepreneurship': {
+                    image: 'assets/certificates/10.jpg',
+                    title: 'Entrepreneurship Awareness Program',
+                    issuer: 'College',
+                    date: '2024'
+                },
+                'teachers-day-1': {
+                    image: 'assets/certificates/11.jpg',
+                    title: 'Teachers Day Participation',
+                    issuer: 'College',
+                    date: '2024'
+                },
+                'teachers-day-2': {
+                    image: 'assets/certificates/12.jpg',
+                    title: 'Teachers Day Participation',
+                    issuer: 'College',
+                    date: '2024'
+                },
+                'tug-of-war': {
+                    image: 'assets/certificates/13.jpg',
+                    title: 'Tug of War Sports Certificate',
+                    issuer: 'College Sports',
+                    date: '2024'
+                },
+                'sampark-2025': {
+                    image: 'assets/certificates/14.jpg',
+                    title: 'Sampark 2025',
+                    issuer: 'Event Organization',
+                    date: '2025'
+                },
+                'isro-hackathon': {
+                    image: 'assets/certificates/15.jpg',
+                    title: 'Bhartiya Antariksh Hackathon 2024',
+                    issuer: 'ISRO (Indian Space Research Organisation)',
+                    date: '2024'
+                }
+            };
+
+            // Open modal function
+            function openModal(certificateId) {
+                const data = certificateData[certificateId];
+                if (data) {
+                    currentCertificateData = data;
+                    modalImage.src = data.image;
+                    modalTitle.textContent = data.title;
+                    modalIssuer.textContent = data.issuer;
+                    modalDate.textContent = data.date;
+
+                    // Reset zoom
+                    currentZoom = 1;
+                    updateImageZoom();
+
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            // Close modal function
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                currentCertificateData = null;
+                currentZoom = 1;
+            }
+
+            // Zoom functions
+            function updateImageZoom() {
+                modalImage.style.transform = `scale(${currentZoom})`;
+                modalImage.style.cursor = currentZoom > 1 ? 'grab' : 'default';
+            }
+
+            function zoomIn() {
+                if (currentZoom < 3) {
+                    currentZoom += 0.25;
+                    updateImageZoom();
+                }
+            }
+
+            function zoomOut() {
+                if (currentZoom > 0.5) {
+                    currentZoom -= 0.25;
+                    updateImageZoom();
+                }
+            }
+
+            function resetZoom() {
+                currentZoom = 1;
+                updateImageZoom();
+            }
+
+            // Download function
+            function downloadCertificate() {
+                if (currentCertificateData) {
+                    const link = document.createElement('a');
+                    link.href = currentCertificateData.image;
+                    link.download = `${currentCertificateData.title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.jpg`;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            }
+
+            // Add click listeners to view certificate buttons
+            document.querySelectorAll('.view-certificate-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const certificateId = this.getAttribute('data-modal');
+                    openModal(certificateId);
+                });
+            });
+
+            // Close modal events
+            modalClose.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', closeModal);
+
+            // Zoom control events
+            zoomInBtn.addEventListener('click', zoomIn);
+            zoomOutBtn.addEventListener('click', zoomOut);
+            resetZoomBtn.addEventListener('click', resetZoom);
+            downloadBtn.addEventListener('click', downloadCertificate);
+
+            // Mouse wheel zoom
+            modalImageContainer.addEventListener('wheel', function (e) {
+                if (modal.classList.contains('active')) {
+                    e.preventDefault();
+                    if (e.deltaY < 0) {
+                        zoomIn();
+                    } else {
+                        zoomOut();
+                    }
+                }
+            });
+
+            // Keyboard controls
+            document.addEventListener('keydown', function (e) {
+                if (modal.classList.contains('active')) {
+                    switch (e.key) {
+                        case 'Escape':
+                            closeModal();
+                            break;
+                        case '+':
+                        case '=':
+                            e.preventDefault();
+                            zoomIn();
+                            break;
+                        case '-':
+                            e.preventDefault();
+                            zoomOut();
+                            break;
+                        case '0':
+                            e.preventDefault();
+                            resetZoom();
+                            break;
+                        case 'd':
+                        case 'D':
+                            if (e.ctrlKey || e.metaKey) {
+                                e.preventDefault();
+                                downloadCertificate();
+                            }
+                            break;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

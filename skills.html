@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skills - Balasara Drona Prakash Technical Expertise">
+    <title>Skills - Balasara Drona Prakash</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-skills">
+    <!-- Modern Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon">🏠</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <span class="nav-icon">👨‍💻</span>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="experience.html" class="nav-link">
+                        <span class="nav-icon">💼</span>
+                        <span>Experience</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">
+                        <span class="nav-icon">🚀</span>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="skills.html" class="nav-link active">
+                        <span class="nav-icon">⚡</span>
+                        <span>Skills</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="certificates.html" class="nav-link">
+                        <span class="nav-icon">🏆</span>
+                        <span>Certificates</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <span class="nav-icon">📧</span>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav-right">
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="page-content">
+
+        
+        <!-- Skills Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Technical Skills</h1>
+                <p class="page-subtitle">Comprehensive expertise across multiple domains</p>
+            </div>
+        </section>
+
+        <!-- Skills Filter Navigation -->
+        <section class="skills-filter-section">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Skills</button>
+                    <button class="filter-tab" data-filter="languages">Languages & Frameworks</button>
+                    <button class="filter-tab" data-filter="tools">Developer Tools</button>
+                    <button class="filter-tab" data-filter="design">Design & Competencies</button>
+                    <button class="filter-tab" data-filter="ai">AI Tools</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Grid -->
+        <section class="skills-grid-section">
+            <div class="container">
+                <!-- Languages & Frameworks -->
+                <div class="skills-category" data-category="languages">
+                    <h2 class="category-title">Languages & Frameworks</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="python">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                            </div>
+                            <h3>Python</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="95"></div>
+                            </div>
+                            <p>Advanced proficiency in Python development</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Kivy</span>
+                                <span class="tool-tag">PyTorch</span>
+                                <span class="tool-tag">Flask</span>
+                                <span class="tool-tag">Django</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="javascript">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                            </div>
+                            <h3>JavaScript</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="90"></div>
+                            </div>
+                            <p>Modern JavaScript and ES6+ features</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">React</span>
+                                <span class="tool-tag">Context API</span>
+                                <span class="tool-tag">Node.js</span>
+                                <span class="tool-tag">Express</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="react">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                            </div>
+                            <h3>React</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="88"></div>
+                            </div>
+                            <p>Component-based UI development</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Hooks</span>
+                                <span class="tool-tag">Context API</span>
+                                <span class="tool-tag">Redux</span>
+                                <span class="tool-tag">Next.js</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="html-css">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+                            </div>
+                            <h3>HTML & CSS</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="92"></div>
+                            </div>
+                            <p>Semantic markup and modern styling</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">HTML5</span>
+                                <span class="tool-tag">CSS3</span>
+                                <span class="tool-tag">Flexbox</span>
+                                <span class="tool-tag">Grid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developer Tools -->
+                <div class="skills-category" data-category="tools">
+                    <h2 class="category-title">Developer Tools</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="git">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+                            </div>
+                            <h3>Git & Version Control</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="85"></div>
+                            </div>
+                            <p>Version control and collaboration</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">GitHub</span>
+                                <span class="tool-tag">GitLab</span>
+                                <span class="tool-tag">Branching</span>
+                                <span class="tool-tag">Merging</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="vscode">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+                            </div>
+                            <h3>VS Code</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="90"></div>
+                            </div>
+                            <p>Advanced IDE usage and customization</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Extensions</span>
+                                <span class="tool-tag">Debugging</span>
+                                <span class="tool-tag">Snippets</span>
+                                <span class="tool-tag">Themes</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="ai-editors">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="AI Code Editors" />
+                            </div>
+                            <h3>AI Code Editors</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="88"></div>
+                            </div>
+                            <p>Next-generation development tools</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Cursor</span>
+                                <span class="tool-tag">Kiro</span>
+                                <span class="tool-tag">Trae</span>
+                                <span class="tool-tag">GitHub Copilot</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="n8n">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="N8N Automation" />
+                            </div>
+                            <h3>N8N Automation</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="75"></div>
+                            </div>
+                            <p>Workflow automation and integration</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Workflows</span>
+                                <span class="tool-tag">APIs</span>
+                                <span class="tool-tag">Triggers</span>
+                                <span class="tool-tag">Nodes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design & Competencies -->
+                <div class="skills-category" data-category="design">
+                    <h2 class="category-title">Design & Competencies</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="ui-ux">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="UI/UX Design" />
+                            </div>
+                            <h3>UI/UX Design</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="82"></div>
+                            </div>
+                            <p>User-centered design principles</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Figma</span>
+                                <span class="tool-tag">Wireframing</span>
+                                <span class="tool-tag">Prototyping</span>
+                                <span class="tool-tag">User Research</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="photoshop">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg" alt="Adobe Photoshop" />
+                            </div>
+                            <h3>Adobe Photoshop</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="85"></div>
+                            </div>
+                            <p>Digital image editing and manipulation</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Photo Editing</span>
+                                <span class="tool-tag">Digital Art</span>
+                                <span class="tool-tag">Compositing</span>
+                                <span class="tool-tag">Retouching</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="premiere">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" alt="Premiere Pro" />
+                            </div>
+                            <h3>Premiere Pro</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="80"></div>
+                            </div>
+                            <p>Video editing and post-production</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Video Editing</span>
+                                <span class="tool-tag">Color Grading</span>
+                                <span class="tool-tag">Audio Sync</span>
+                                <span class="tool-tag">Effects</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="prompt-engineering">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg" alt="Prompt Engineering" />
+                            </div>
+                            <h3>Prompt Engineering</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="90"></div>
+                            </div>
+                            <p>AI interaction and optimization</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">AI Prompts</span>
+                                <span class="tool-tag">Optimization</span>
+                                <span class="tool-tag">Fine-tuning</span>
+                                <span class="tool-tag">Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Tools -->
+                <div class="skills-category" data-category="ai">
+                    <h2 class="category-title">AI Tools</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="machine-learning">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="Machine Learning" />
+                            </div>
+                            <h3>Machine Learning</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="85"></div>
+                            </div>
+                            <p>ML algorithms and model development</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Scikit-learn</span>
+                                <span class="tool-tag">TensorFlow</span>
+                                <span class="tool-tag">Data Analysis</span>
+                                <span class="tool-tag">Model Training</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="perplexity">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Perplexity AI" />
+                            </div>
+                            <h3>Perplexity AI</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="88"></div>
+                            </div>
+                            <p>AI-powered research and analysis</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Research</span>
+                                <span class="tool-tag">Fact-checking</span>
+                                <span class="tool-tag">Analysis</span>
+                                <span class="tool-tag">Citations</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="pytorch">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" />
+                            </div>
+                            <h3>PyTorch</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="75"></div>
+                            </div>
+                            <p>Deep learning framework</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Neural Networks</span>
+                                <span class="tool-tag">Training</span>
+                                <span class="tool-tag">Models</span>
+                                <span class="tool-tag">Optimization</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="opencv">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" />
+                            </div>
+                            <h3>OpenCV</h3>
+                            <div class="skill-level">
+                                <div class="level-bar" data-level="70"></div>
+                            </div>
+                            <p>Computer vision and image processing</p>
+                            <div class="skill-tools">
+                                <span class="tool-tag">Image Processing</span>
+                                <span class="tool-tag">Object Detection</span>
+                                <span class="tool-tag">Feature Extraction</span>
+                                <span class="tool-tag">Video Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Summary -->
+        <section class="skills-summary-section">
+            <div class="container">
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <h3>Years of Experience</h3>
+                        <div class="summary-number">3+</div>
+                        <p>Continuous learning and development</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Technologies Mastered</h3>
+                        <div class="summary-number">10+</div>
+                        <p>Across multiple domains and platforms</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Projects Completed</h3>
+                        <div class="summary-number">8+</div>
+                        <p>Using various tech stacks</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Certifications</h3>
+                        <div class="summary-number">18+</div>
+                        <p>Professional development achievements</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Balasara Drona Prakash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/theme-manager.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/skills-filter.js"></script>
+    <script src="js/gsap-animations.js"></script>
+</body>
+</html>
